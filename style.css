@@ -155,6 +155,9 @@ body {
   .btn-1{
     display: block;
   }
+  .btn1-link{
+    text-decoration: none;
+  }
 }
 
 /* navbar end */

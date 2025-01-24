@@ -1,0 +1,524 @@
+/* General Styles start */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+    /* Navbar start  */
+.banner-wrap {
+    background-color: #fff; 
+    padding: 0px 0;
+  }
+  .banner-wrap .container-fluid {
+    padding: 0;
+  }
+  .banner-wrap{
+    padding-top: 0;
+  }
+  .navbar {
+    padding: 10px 20px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand img {
+    height: 50px; 
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  .navbar-nav .nav-item .nav-link {
+    color: #333333; 
+    font-family: "Lato", serif;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover,
+  .navbar-nav .nav-item .nav-link:focus {
+    color: #e52333; 
+  }
+  
+  .navbar-nav .dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav .dropdown-item {
+    padding: 10px 20px;
+    font-family: "Lato", serif;
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  .navbar-nav .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #e52333;
+  }
+  a {
+    text-decoration: none; /* Removes underline from all anchor tags */
+  }
+  
+  a .btn-1 {
+    text-decoration: none; /* Ensures no underline for buttons inside anchor tags */
+  }
+  
+  /* From Uiverse.io by alexroumi */ 
+  .btn-1 {
+    font-family: "Lato", serif;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 19px;
+    color: #212121;
+    z-index: 1;
+    background: #fff;
+    border: 2px solid #e52333;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    --webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    /* box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   .btn-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   .btn-1:hover {
+    border: 2px solid #212121;
+    color: #e8e8e8;
+   }
+   .dropdown-menu .dropdown-item i {
+    margin-right: 8px; /* Space between the icon and the text */
+    font-size: 16px;   /* Adjust icon size as needed */
+    vertical-align: middle; /* Align icon vertically */
+    color: #555; /* Optional: Set icon color */
+  }
+  
+   .btn-1:hover::before {
+    width: 100%;
+   }
+  @media (max-width: 768px) {
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+  
+    .navbar-nav .nav-item .nav-link {
+      margin-right: 0;
+    }
+  }
+  
+   
+  /* Media-Query : Navbar  */
+  @media screen and (max-width: 992px){
+    .btn-1{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px){
+     
+  }
+  @media screen and (max-width: 576px){
+    .banner-wrap .navbar-brand img{
+      width: 190px;
+    }
+    .btn-1{
+      display: block;
+      /* text-decoration: none; */
+    }
+    .btn1-link {
+        text-decoration: none;
+      }
+  }
+  
+  /* navbar end */
+  
+  /* book section start */
+
+
+  .contact-bg {
+    position: relative; /* To position the pseudo-element properly */
+    height: 60vh;
+    background-image: url(img/checkinm.avif);
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure content stays above the overlay */
+  }
+  
+  .contact-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (0.5 = 50% transparent) */
+    z-index: -1; /* Place the overlay behind the content */
+  }
+  
+.contact-bg h3{
+    font-family: "Lato", serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.contact-bg h2{
+    font-family: "Lato", serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+}
+.line div{
+    margin: 0 0.2rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3){
+    height: 3px;
+    width: 70px;
+    background: #e52333;
+    border-radius: 5px;
+}
+.line{
+    display: flex;
+    align-items: center;
+}
+.line div:nth-child(2){
+    width: 10px;
+    height: 10px;
+    background: #e52333;
+    border-radius: 50%;
+}
+.text{
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-size: 16px;
+    opacity: 0.9;
+}
+.contact-bg .text{
+    margin: 1.6rem 0;
+}
+.contact-body{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.contact-info{
+    margin: 2rem 0;
+    text-align: center;
+    padding: 2rem 0;
+}
+.contact-info span{
+    display: block;
+}
+.contact-info div{
+    margin: 0.8rem 0;
+    padding: 1rem;
+}
+.contact-info span .fas{
+    font-size: 2rem;
+    font-family: "Lato", serif;
+    padding-bottom: 0.9rem;
+    color: #e52333;
+}
+.contact-info div span:nth-child(2){
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.contact-info .text{
+    padding-top: 0.4rem;
+}
+.contact-form{
+    padding: 2rem 0;
+    border-top: 1px solid #c7c7c7;
+}
+.contact-form form{
+    padding-bottom: 1rem;
+}
+.form-control{
+    width: 100%;
+    border: 1.5px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin: 0.6rem 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    outline: 0;
+}
+.form-control:focus{
+    box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+}
+.contact-form form div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.6rem;
+}
+.send-btn{
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: "Lato", serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #e52333;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.send-btn:hover{
+    opacity: 0.8;
+}
+.contact-form > div img{
+    width: 85%;
+}
+.contact-form > div{
+    margin: 0 auto;
+    text-align: center;
+}
+.contact-footer{
+    padding: 2rem 0;
+    background: #000;
+}
+.contact-footer h3{
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+.social-links a{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.4rem;
+    transition: all 0.4s ease;
+}
+.social-links a:hover{
+    color: #f7327a;
+    border-color: #f7327a;
+}
+
+@media screen and (min-width: 768px){
+    .contact-bg .text{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .contact-bg .text{
+        width: 50%;
+    }
+    .contact-form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .contact-info{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+  
+  /* book section end */
+
+  /* footer start */
+
+.footer-area {
+    font-family: "Lato", serif;
+    background-color: white; /* Set background color to white */
+    box-shadow: 0 -8px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; /* Add shadow on top */
+    padding: 20px; 
+  }
+  
+  @media (max-width: 767px) {
+    .footer-widget {
+      padding-top: 30px;
+      padding-bottom: 80px; } }
+  
+  .footer-logo a img {
+    width: 140px; }
+  
+  .footer-logo p {
+    line-height: 26px;
+    font-size: 16px; }
+  
+  .footer-logo .footer-info li {
+    font-family: "Lato", serif;
+    margin-top: 20px; }
+    .footer-logo .footer-info li .single-info {
+      font-family: "Lato", serif;
+      position: relative; }
+      .footer-logo .footer-info li .single-info .info-icon {
+        position: absolute;
+        top: 3px;
+        left: 0; }
+        .footer-logo .footer-info li .single-info .info-icon i {
+          font-family: "Lato", serif;
+          font-size: 18px;
+        }
+          
+      .footer-logo .footer-info li .single-info .info-content {
+        padding-left: 30px; }
+  
+  .footer-logo .footer-social li {
+    display: inline-block;
+    margin-left: 15px; }
+    .footer-logo .footer-social li:first-child {
+      margin-left: 0; }
+    .footer-logo .footer-social li a i {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #e52333;
+      color: #fff;
+      font-size: 19px;
+      /* -webkit-box-shadow: 0px 5px 21px 0px rgba(232, 39, 13, 0.4);
+      -moz-box-shadow: 0px 5px 21px 0px rgba(220, 36, 11, 0.4);
+      box-shadow: 0px 5px 21px 0px rgba(204, 26, 3, 0.4); */
+      -webkit-transition: all 0.4s ease-out 0s;
+      -moz-transition: all 0.4s ease-out 0s;
+      -ms-transition: all 0.4s ease-out 0s;
+      -o-transition: all 0.4s ease-out 0s;
+      transition: all 0.4s ease-out 0s;
+     }
+     .footer-logo .footer-social li a  {
+      font-size: 24px; /* Increase the size as needed */
+  }
+  
+      .footer-logo .footer-social li a:hover {
+        /* background-color: #E52333; */
+        color: #fff; }
+  
+  .f-title .title {
+    font-family: "Lato", serif;
+    font-size: 22px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600; }
+  
+  .footer-link ul li {
+    padding-top: 5px; }
+    .footer-link ul li a {
+      font-family: "Lato", serif;
+      text-decoration: none;
+      font-size: 16px;
+      color: #555555;
+      font-weight: bold;
+      font-family: 'Hind', sans-serif;
+      -webkit-transition: all 0.4s ease-out 0s;
+      -moz-transition: all 0.4s ease-out 0s;
+      -ms-transition: all 0.4s ease-out 0s;
+      -o-transition: all 0.4s ease-out 0s;
+      transition: all 0.4s ease-out 0s; }
+      .footer-link ul li a:hover {
+        color: #EB3656; }
+  
+  .footer-newsleter p {
+    font-family: "Lato", serif;
+    line-height: 26px;
+    font-size: 16px; }
+  
+  .footer-newsleter .newsleter {
+    position: relative; }
+    .footer-newsleter .newsleter input {
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      border: 1px solid #e52333;
+      background-color: #fff; }
+    .footer-newsleter .newsleter button {
+      font-family: "Lato", serif;
+      border: 0;
+      width: 66px;
+      text-align: center;
+      padding: 0;
+      height: 50px;
+      background: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #E52333;
+      font-size: 20px;
+      line-height: 57px;
+      cursor: pointer; }
+      @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        .footer-newsleter .newsleter button {
+          width: 45px; } }
+      .footer-newsleter .newsleter button::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 36px;
+        background-color: #EB3656;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%); }
+  
+  .copyright-area {
+    border-top: 1px solid #eceff8;
+    padding: 13px 0; }
+  
+  
+  
+  
+  /* footer end */
