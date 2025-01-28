@@ -164,162 +164,180 @@ body {
 
 
   /* Hero Section */
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 20px;
-    gap: 20px;
-  }
-  
-  .hero-image img {
-    width: 500px;
-    height: 500px;
-    object-fit: fill;
-    border-radius: 0%;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-  }
-  
-  .hero-content {
-    max-width: 600px;
-  }
-  
-  .hero-content h1 {
-    font-family: "Lato", serif;
-    font-size: 32px;
-    color: #000000; /* Ensures it is pure black */
-    font-weight: 900; /* Makes it very bold */
-    margin-bottom: 20px;
+.hero-section {
+  /* background: linear-gradient(to right, #e52333, #ff6b6b); Smooth gradient background */
+  color: #000000;
+  padding: 60px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-  
-  .hero-content p {
-    font-family: "Lato", serif;
-    font-weight: 600;
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  .btn-2 {
-    font-family: "Lato", serif;
-    padding: 15px 25px;
-    border: unset;
-    border-radius: 19px;
-    color: #212121;
-    z-index: 1;
-    background: #fff;
-    border: 2px solid #e52333;
-    position: relative;
-    font-weight: 1000;
-    font-size: 17px;
-    --webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    /* box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
-    transition: all 250ms;
-    overflow: hidden;
-   }
-   
-   .btn-2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    border-radius: 15px;
-    background-color: #212121;
-    z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms
-   }
-   
-   .btn-2:hover {
-    border: 2px solid #212121;
-    color: #e8e8e8;
-   }
-   
-   .btn-2:hover::before {
-    width: 100%;
-   }
-
-@media (max-width: 992px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 15px;
-  }
-
-  .hero-image img {
-    width: 400px;
-    height: 400px;
-  }
-
-  .hero-content h1 {
-    font-size: 28px;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-  }
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.4); Subtle dark overlay for contrast */
+  z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 30px 10px;
-  }
-
-  .hero-image img {
-    width: 300px;
-    height: 300px;
-  }
-
-  .hero-content h1 {
-    font-size: 24px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
+.hero-section .container {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
 }
-@media (max-width: 576px) {
-  .hero {
-    flex-direction: column;
-    align-items: flex-start; 
-    text-align: left; 
-    padding: 20px 10px;
-    padding-left: 5px;
-    padding-right: 5px; 
-  }
 
-  .hero-image img {
-    width: 398px;
-    height: 370px;
-    align-self: flex-start; 
-  }
+.hero-title {
+  font-family: "Lato", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
 
-  .hero-content {
-    max-width: 100%;
-  }
+.hero-description {
+  font-family: "Lato", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 2rem;
+}
 
-  .hero-content h1 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 20px; 
-  }
+.hero-buttons .btn {
+  font-family: "Lato", serif;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-  .hero-content p {
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.6; 
-  }
-  .btn-container{
-    text-align: center;
-  }
+.btn.custom-btn {
+  background-color: #e52333;
+  color: #fff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn.custom-btn:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+}
+
+.btn.secondary-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.secondary-btn:hover {
+  background-color: #fff;
+  color: #e52333;
+  transform: translateY(-3px);
+}
+
+.hero-image-wrap {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.hero-image-container {
+  position: relative; 
+  display: inline-block; 
+}
+
+.hero-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; 
+  filter: blur(10px); 
+  z-index: -1; 
+  border-radius: 10px; 
+}
+
+.hero-image {
+  max-width: 90%;
+  position: relative; 
+  filter: drop-shadow(0px 10px 15px rgba(255, 0, 0, 0.4));
+  /* filter: drop-shadow(0px 10px 15px rgba(225, 5, 5, 0.2)); */
 }
 
 
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+  .hero-section {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 45%;
+    margin-bottom: 15px;
+  }
+
+  .hero-image {
+    width: 800px;
+    height: 800px;
+    /* margin-top: 30px; */
+  }
+}
+@media screen and (max-width: 567px) {
+  .hero-image {
+    width: 120%; /* Increase the image size beyond container width */
+    max-width: none; /* Remove max width limitation */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 15px; /* Adjust spacing */
+  }
+}
 /* hero end */
+
+
+
 
 /* about us section start */
 
@@ -855,11 +873,11 @@ height: 600px;
 }
 
 #app-features .content-left .text p {
-  margin-right: 90px;
+  margin-right: 98px;
 }
 
 #app-features .content-right .text p{
-  margin-left: 118px;
+  margin-left: 98px;
 }
 
 #app-features .show-box {
@@ -919,13 +937,19 @@ height: 600px;
 
 .logos-slide {
   display: inline-block;
-  animation: 20s slide infinite linear; /* Adjusted for a faster loop */
+  animation: 30s slide infinite linear; /* Adjusted for a faster loop */
 }
 
 .logos-slide img {
   height: 80px; /* Increased size for logos */
   margin: 0 40px;
   vertical-align: middle; /* Ensures proper alignment */
+}
+@media (max-width: 576px) {
+  .logos:before,
+  .logos:after {
+    background: none; /* Remove gradient */
+  }
 }
 
 
