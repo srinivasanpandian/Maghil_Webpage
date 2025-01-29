@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Industries</title>
     <link rel="stylesheet" href="industries.css">
      <!-- bootstrap links -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -78,14 +78,14 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        About Us
+                        Resources
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="bookdemo.html"><i class="fa-solid fa-phone"></i>Contact Us</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-phone"></i>Blog</a></li>
                         <!-- <li><hr class="dropdown-divider"></li> -->
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-blog"></i>Blog</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-blog"></i>Case Study</a></li>
                         <!-- <li><hr class="dropdown-divider"></li> -->
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-sheet-plastic"></i>Case Studies</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-sheet-plastic"></i>Videos</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -111,8 +111,9 @@
       <div class="about-text">
         <!-- <h3 class="why-maghil">WE OFFER</h3> -->
         <h1 class="elevate">
-          Tailored<br>
-          for <span class="highlight">Restaurants</span>
+          
+Quick-Service and Fast-Casual Restaurants
+          for <span class="highlight">Dining</span>
         </h1>
         <p>We provide comprehensive solutions in hardware, software, and POS systems, specifically designed to meet the unique needs of the restaurant industry. From robust POS terminals and reliable payment solutions to user-friendly management software, our offerings streamline operations, enhance customer experiences, and optimize efficiency. Whether you're managing a small café or a large restaurant chain, our tailored solutions empower you to handle orders, inventory, and payments effortlessly while focusing on delivering exceptional service.</p>
   
@@ -140,8 +141,8 @@
       <div class="about-text">
         <!-- <h3 class="why-maghil">WHY MAGHIL?</h3> -->
         <h1 class="elevate">
-          We Serve<br>
-           <span class="highlight">Resto Bars</span>
+          Full-Service and Specialty <br>
+           <span class="highlight">Dining</span>
         </h1>
         <p>
             Our hardware, software, and POS systems are tailored to meet the dynamic needs of restro bars. From seamless table management and quick order processing to inventory tracking and real-time sales insights, our solutions help you create a smooth and enjoyable experience for your customers. Whether it’s happy hours or peak-time rush, our systems ensure your operations run efficiently while delivering outstanding service.
@@ -163,8 +164,8 @@
       <div class="about-text">
         <!-- <h3 class="why-maghil">WE OFFER</h3> -->
         <h1 class="elevate">
-          We Focus<br>
-          on <span class="highlight">Sports Bar</span>
+          Mobile and Temporary Food<br>
+          <span class="highlight">Businesses</span>
         </h1>
         <p>At Maghil, we offer comprehensive solutions, including cutting-edge hardware, reliable software, and advanced POS systems tailored to meet your business needs. Our services are designed to enhance operational efficiency, improve customer experience, and drive your business forward with innovative technology.</p>
   
@@ -190,8 +191,8 @@
       <div class="about-text">
         <!-- <h3 class="why-maghil">WHY MAGHIL?</h3> -->
         <h1 class="elevate">
-          Elevating Your Sales<br>
-          By <span class="highlight">Maghil at Reatil Shops</span>
+          Delivery and Catering-Focused Restaurants<br>
+          <span class="highlight"> Restaurants</span>
         </h1>
         <p>
           The Maghil app stands as a revolutionary force in the realm of dining and business management, offering a multifaceted solution that transcends the boundaries of traditional platforms.
@@ -278,19 +279,19 @@
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="footer-link mt-45">
                         <div class="f-title">
-                            <h4 class="title">About Us</h4>
+                            <h4 class="title">Resources</h4>
                         </div>
                         <ul class="mt-15">
-                            <li><a href="bookdemo.html">Contact-Us</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Case Study</a></li>
+                            <li><a href="#">Videos</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-5 col-sm-8">
                     <div class="footer-newsleter mt-45">
                         <div class="f-title">
-                            <h4 class="title">Newsleter</h4>
+                            <h4 class="title">Newsletter</h4>
                         </div>
                         <p class="mt-15">"Subscribe to our newsletter for the latest updates, tips, and exclusive offers!"</p>
                         <form action="#">
@@ -321,50 +322,6 @@
   <!-- footer end -->
   
 
-<script>
-    let nextButton = document.getElementById('next');
-let prevButton = document.getElementById('prev');
-let carousel = document.querySelector('.carousel');
-let listHTML = document.querySelector('.carousel .list');
-let seeMoreButtons = document.querySelectorAll('.seeMore');
-let backButton = document.getElementById('back');
-
-nextButton.onclick = function(){
-    showSlider('next');
-}
-prevButton.onclick = function(){
-    showSlider('prev');
-}
-let unAcceppClick;
-const showSlider = (type) => {
-    nextButton.style.pointerEvents = 'none';
-    prevButton.style.pointerEvents = 'none';
-
-    carousel.classList.remove('next', 'prev');
-    let items = document.querySelectorAll('.carousel .list .item');
-    if(type === 'next'){
-        listHTML.appendChild(items[0]);
-        carousel.classList.add('next');
-    }else{
-        listHTML.prepend(items[items.length - 1]);
-        carousel.classList.add('prev');
-    }
-    clearTimeout(unAcceppClick);
-    unAcceppClick = setTimeout(()=>{
-        nextButton.style.pointerEvents = 'auto';
-        prevButton.style.pointerEvents = 'auto';
-    }, 2000)
-}
-seeMoreButtons.forEach((button) => {
-    button.onclick = function(){
-        carousel.classList.remove('next', 'prev');
-        carousel.classList.add('showDetail');
-    }
-});
-backButton.onclick = function(){
-    carousel.classList.remove('showDetail');
-}
-</script>
 
 
 </body>
