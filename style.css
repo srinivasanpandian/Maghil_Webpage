@@ -213,6 +213,7 @@ body {
   padding: 0.9rem 1.8rem;
   font-size: 1rem;
   border-radius: 8px;
+  border: 2px solid #e52333;
   font-weight: bold;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -220,11 +221,14 @@ body {
 .btn.custom-btn {
   background-color: #e52333;
   color: #fff;
+   
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn.custom-btn:hover {
   background-color: #fff;
+  color: black;
+  border: 2px #e52333;
   transform: translateY(-3px);
 }
 

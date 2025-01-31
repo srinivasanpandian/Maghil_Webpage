@@ -14,4 +14,6 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
-
+document.querySelector(".card-btn").addEventListener("click", function () {
+    window.location.href = "features.html";
+  });
