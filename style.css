@@ -1,4 +1,7 @@
+/* font-family: "Roboto", serif;
+ */
 /* General Styles start */
+
 body {
     margin: 0;
     padding: 0;
@@ -196,14 +199,16 @@ body {
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.2;
-  color: #000;
+  color: #000000;
   margin-bottom: 1.5rem;
 }
 
 .hero-description {
-  font-family: "Lato", serif;
+  /* font-family: "Lato", serif; */
+  /* font-family: "Poppins", serif; */
+  font-family: "Roboto", serif;
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 2;
   color: #000000;
   margin-bottom: 2rem;
 }
@@ -354,27 +359,29 @@ h3 {
   color: #e52333;
   font-size: 1.2rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 h1 {
   font-family: "Lato", serif;
   font-size: 2.5rem;
-  font-weight: bolder;
+  font-weight: 900;
   margin: 1rem 0;
 }
 
 h1 .highlight {
   font-family: "Lato", serif;
   color: #e52333;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 p {
-  font-family: "Lato", serif;
+  /* font-family: "Lato", serif; */
+  /* font-family: "Poppins", serif; */
+  font-family: "Roboto", serif;
   font-size: 20px;
-  color: #555555;
-  font-weight: 900;
+  color: #000;
+  font-weight: 400;
   margin: 0.5rem 0;
 }
 
@@ -397,6 +404,7 @@ p {
   justify-content: center;
 }
 .about-image img{
+  
 width: 450px;
 height: 600px;
 }
@@ -465,14 +473,14 @@ height: 600px;
 /* Max width 576px (Mobile Portrait) */
 @media (max-width: 576px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   p{
-    font-size: 16px;
+    font-size: 20px;
   }
   .about-content {
     /* flex-direction: column; */
@@ -516,11 +524,12 @@ height: 600px;
 .product-category {
   text-align: center;
   font-size: 32px;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Roboto", serif;
+  font-weight: 900;
   margin-bottom: 20px;
   text-transform: uppercase;
-  color: #333;
+  color: #000;
 }
 
 .product-container {
@@ -772,7 +781,9 @@ height: 600px;
   font-size: 14px;
   line-height: 26px;
 }
-
+.text p {
+  color: #000;
+}
 .text-wrapper {
   height: 100%;
   width: 100%;
@@ -897,7 +908,8 @@ height: 600px;
 }
 
 #app-features .show-box img {
-  width: 100%;
+  width: 300px;
+  height: 450px;
 }
 
 
