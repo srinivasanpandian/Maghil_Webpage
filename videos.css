@@ -221,46 +221,57 @@ body {
   }
   
   
-  /* Play button overlay style */
   .play-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
+    padding: 22px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .play-overlay i {
-    font-size: 40px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.play-overlay:hover {
+    background: rgba(15, 15, 15, 0.8);
+    box-shadow: 0 0 15px rgba(245, 243, 242, 0.9);
+}
+
+.play-overlay i {
+    font-size: 45px;
     color: white;
-  }
+    transition: 0.3s ease-in-out;
+}
+
+.play-overlay:hover i {
+    transform: scale(1.2);
+}
+
   
   /* Responsive adjustments for mobile */
   @media screen and (max-width: 768px) {
     .video-container {
-      width: 100%; /* Full width for mobile */
+        width: 90%;
     }
-  
+
     .play-overlay {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .play-overlay i {
-      font-size: 35px;
+        font-size: 35px;
     }
-  
+
     .video-wrapper {
-      gap: 10px;
+        gap: 10px;
     }
-  }
-  
+}
+
 
 /* video section end */
 
