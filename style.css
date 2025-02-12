@@ -1,6 +1,9 @@
 /* font-family: "Roboto", serif;
+ font-family: "Outfit", serif;
  */
 /* General Styles start */
+
+
 
 body {
     margin: 0;
@@ -195,9 +198,10 @@ body {
 }
 
 .hero-title {
-  font-family: "Lato", serif;
+  font-family: "Outfit", serif;
+  /* font-family: "Lato", serif; */
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 1.2;
   color: #000000;
   margin-bottom: 1.5rem;
@@ -355,7 +359,8 @@ h3, h1 {
 }
 
 h3 {
-  font-family: "Lato", serif;
+  /* font-family: "Lato", serif; */
+  font-family: "Outfit", serif;
   color: #e52333;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -363,7 +368,8 @@ h3 {
 }
 
 h1 {
-  font-family: "Lato", serif;
+  /* font-family: "Lato", serif; */
+  font-family: "Outfit", serif;
   font-size: 2.5rem;
   font-weight: 900;
   margin: 1rem 0;
